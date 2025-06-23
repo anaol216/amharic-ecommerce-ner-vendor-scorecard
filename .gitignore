@@ -1,1 +1,46 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment
+.env
+.venv/
+env/
+venv/
+*.env
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Colab
+*.ipynb~
+
+# Models
+*.bin
+*.pt
+*.h5
+*.ckpt
+models/
+checkpoints/
+
+# Data
+data/raw/
+data/cleaned/
+data/labeled/
+
+# Outputs
+*.log
+*.csv
+*.xlsx
+*.pdf
+
+# Pytest
+.cache/
+
+# Hugging Face cache
+~/.cache/huggingface/
 
