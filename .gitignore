@@ -44,3 +44,10 @@ data/labeled/
 # Hugging Face cache
 ~/.cache/huggingface/
 
+# DVC
+!.dvc/
+.dvcignore
+*.dvc
+
+# Data
+Data/
