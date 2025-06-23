@@ -47,7 +47,7 @@ data/labeled/
 # DVC
 !.dvc/
 .dvcignore
-*.dvc
+!*.dvc
 
 # Data
 Data/
