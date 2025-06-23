@@ -1,1 +1,28 @@
+# Core libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
 
+# Transformers and NLP
+transformers
+datasets
+tokenizers
+sentencepiece
+torch
+protobuf<4.0.0
+
+# Model interpretability
+shap
+lime
+
+# Telegram scraping
+telethon
+
+# Evaluation
+seqeval
+
+# Testing
+pytest
+flake8
