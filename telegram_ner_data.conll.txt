@@ -1,0 +1,142 @@
+2	B-Product
+tier	I-Product
+stainless	I-Product
+still	I-Product
+dish	I-Product
+drainer	I-Product
+rack	I-Product
+4200	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+2	B-Product
+tier	I-Product
+stainless	I-Product
+still	I-Product
+dish	I-Product
+drainer	I-Product
+rack	I-Product
+4200	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+የልብስ	B-Product
+ማስጫ	I-Product
+(ማድረቂያ)	I-Product
+3700	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+55L	B-Product
+Glass	I-Product
+dispenser	I-Product
+jar	I-Product
+with	I-Product
+Bamboo	I-Product
+stand	I-Product
+4000	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+55L	B-Product
+Glass	I-Product
+dispenser	I-Product
+jar	I-Product
+with	I-Product
+Bamboo	I-Product
+stand	I-Product
+4000	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+3in1	B-Product
+Rotatable	I-Product
+outlet	I-Product
+extender	I-Product
+350	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+3in1	B-Product
+Rotatable	I-Product
+outlet	I-Product
+extender	I-Product
+350	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+Plastic	B-Product
+And	I-Product
+Metal	I-Product
+Cubic	I-Product
+Cloth	I-Product
+Cabinet	I-Product
+5500	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+Plastic	B-Product
+And	I-Product
+Metal	I-Product
+Cubic	I-Product
+Cloth	I-Product
+Cabinet	I-Product
+5500	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+wc	B-Product
+toilet	I-Product
+rackwashing	I-Product
+machin	I-Product
+rack	I-Product
+3500	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+wc	B-Product
+toilet	I-Product
+rackwashing	I-Product
+machin	I-Product
+rack	I-Product
+3500	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+BARDEFU	B-Product
+2	I-Product
+IN	I-Product
+1	I-Product
+Multi	I-Product
+purpose	I-Product
+juicer	I-Product
+6800	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+BARDEFU	B-Product
+2	I-Product
+IN	I-Product
+1	I-Product
+Multi	I-Product
+purpose	I-Product
+juicer	I-Product
+6800	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+portable	B-Product
+electrical	I-Product
+water	I-Product
+dispenser	I-Product
+1600	B-PRICE
+.	I-PRICE
+0	I-PRICE
+
+portable	B-Product
+electrical	I-Product
+water	I-Product
+dispenser	I-Product
+1600	B-PRICE
+.	I-PRICE
+0	I-PRICE
