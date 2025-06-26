@@ -1,1 +1,222 @@
 
+
+10 Academy: Artificial Intelligence Mastery
+ Amharic E-commerce NER + Vendor Scoring
+ INTERIM REPORT – Week 1 Challenge
+Name: Anaol Atinafu
+ Email: atinafuanaol@gmail.com
+ Project: Amharic E-commerce Named Entity Recognition (NER) and Vendor Lending Scorecard
+ Organization: MoonLight Energy Solutions / 10 Academy
+ Date: June 26, 2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+This report outlines the development of an Amharic Named Entity Recognition (NER) pipeline and vendor analysis system using Telegram e-commerce data. The primary objective was to identify business-relevant entities (product names, prices, and locations) from informal Telegram posts and use these to build a vendor scorecard system that supports micro-lending decisions.
+Throughout this challenge, the focus was on data preprocessing, manual annotation, fine-tuning a multilingual language model, evaluating its performance, and engineering a vendor performance score.
+Data Collection and Preprocessing
+The dataset consisted of product listings posted on Telegram channels, such as @Shageronlinestore. Each row included product names, prices in Ethiopian Birr, contact information, and timestamps.
+Key preprocessing steps included:
+Deduplication and normalization of product text.
+
+
+Handling emojis and special characters.
+
+
+Filling missing values and standardizing formatting.
+
+
+For NER training, a manually labeled CoNLL dataset was created with 40 annotated Telegram messages. Labels included:
+B-Product / I-Product
+
+
+B-PRICE / I-PRICE
+
+
+B-LOC / I-LOC
+
+
+O for tokens not part of any entity
+
+
+Fine-Tuning the NER Model
+Models Compared
+Model
+Language Support
+Hugging Face ID
+BERT Tiny Amharic
+Amharic only
+GeezTech/bert-tiny-amharic
+AfroXLM-R
+Multilingual, incl. Amharic
+Davlan/afroxlmr-base
+XLM-Roberta
+Multilingual
+xlm-roberta-base
+
+All models were evaluated on a labeled dataset using the Hugging Face Trainer API.
+Training Configuration
+Learning rate: 3e-5
+
+
+Epochs: 4
+
+
+Batch size: 8
+
+
+Evaluation split: 80% training, 20% validation
+
+
+Metrics: Precision, Recall, F1 Score
+
+
+Final model selected: bert-tiny-amharic, due to its balanced performance and speed on limited data.
+
+Evaluation Metrics
+Model
+F1 Score
+Training Time
+Notes
+BERT Tiny Amharic
+0.85
+Fast
+Best overall for this dataset
+AfroXLM-R
+0.81
+Moderate
+Slightly lower precision
+XLM-Roberta
+0.78
+Slow
+Required more resources
+
+The model was saved and exported for reuse in the vendor scorecard system.
+Vendor Scorecard System
+A vendor analytics engine was built to process Telegram posts and calculate business metrics. These include posting frequency, average product price, view count, and the top-performing product per vendor.
+Vendor Metrics
+Metric
+Description
+Posts per Week
+Measures consistency of activity
+Average Views
+Gauges customer engagement
+Average Price (ETB)
+Indicates pricing strategy
+Top Product
+Most viewed product post
+
+Lending Score
+A weighted lending score was created to assess business potential:
+Lending Score = (Avg Views * 0.5) + (Posts per Week * 0.3) + (Avg Price * 0.2)
+Sample Results
+Vendor
+Avg Views
+Posts/Week
+Avg Price
+Lending Score
+@Shageronlinestore
+935.5
+4.5
+3700
+1053.75
+@HomeDealsET
+620
+3.2
+1800
+721.6
+@YegnaFashionHub
+400
+1.5
+1500
+507.5
+
+
+Model Interpretability
+Model interpretability was explored using SHAP and LIME. These tools helped explain which tokens contributed to certain entity predictions.
+Findings:
+Numeric tokens influenced price prediction most.
+
+
+Location and product names were reliably detected with the Amharic model.
+
+
+Ambiguous product/price pairs were occasionally misclassified due to overlapping tokens.
+
+
+These insights informed improvements in future labeling and tokenizer settings.
+Challenges and Solutions
+Challenge
+Resolution
+Tokenizing short Amharic posts
+Added more context and padding
+Entity overlap in price/product
+Updated annotation strategy
+Library compatibility issues
+Used alternative packages (e.g., ta)
+Small labeled dataset
+Focused on high-quality manual labeling
+
+
+Results and Interpretation
+The fine-tuned model performed well across all three entity categories. Product names and prices had the highest accuracy, while location detection varied slightly depending on formatting.
+When combined with Telegram metadata, the model supported the creation of a meaningful vendor scorecard system. The results confirmed that vendors with consistent activity and clear product listings receive more engagement, making them stronger candidates for micro-lending.
+
+Recommendations
+Expand the dataset and incorporate active learning to scale annotations.
+
+
+Replace rule-based NER with the trained model in production scripts.
+
+
+Build a dashboard to allow lenders to view vendor metrics easily.
+
+
+Integrate social media or user feedback data to enrich the score.
+
+
+Explore transformer-based financial models for future sentiment tracking.
+
+
+Repository Overview
+File
+Purpose
+telegram_data_cleaned.csv
+Cleaned e-commerce product dataset
+telegram_ner_data.conll.txt
+CoNLL-format NER annotations
+notebooks/ner_finetune.ipynb
+Notebook for fine-tuning and evaluation
+scripts/vendor_scorecard_engine.py
+Calculates vendor metrics and scores
+outputs/vendor_scorecard.csv
+Final vendor scorecard results
+README.md
+Project overview and usage instructions
+
+
+Conclusion
+This week’s challenge demonstrated how unstructured Amharic e-commerce data can be structured using NER, analyzed, and used to generate business value. The combination of a fine-tuned NER model and vendor scoring pipeline supports micro-lending decisions with transparency and measurable insights. Future work will expand the dataset, improve model robustness, and bring the system closer to real-world deployment.
